@@ -1,0 +1,8 @@
+* {
+  padding: 0.1rem;
+  box-sizing: border-box;
+}
+.webLogo {
+  padding: 0.2rem;
+  max-width: 20vw;
+}
