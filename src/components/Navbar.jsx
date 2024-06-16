@@ -15,29 +15,38 @@ function Navbar() {
           <ul>
             <Link to={"/"}>
               <li>
-                <img
-                  className="dashboardLogo"
-                  src="../src/assets/dashboardlogo.svg"
-                ></img>
+                <img className="icon" src="./public/icons/home-icon.svg"></img>
                 Home
               </li>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/favorites"}>
               <li>
                 <img
-                  className="manageLogo"
-                  src="../src/assets/managelogo.svg"
+                  className="icon"
+                  src="./public/icons/favorite-icon.svg"
                 ></img>
                 Favorites
               </li>{" "}
             </Link>
+            <Link to={"/music"}>
+              <li>
+                <img className="icon" src="./public/icons/music-icon.svg"></img>
+                Curate
+              </li>
+            </Link>
+
             <Link to={"/about"}>
               <li>
-                <img
-                  className="aboutLogo"
-                  src="../src/assets/aboutlogo.svg"
-                ></img>
+                <img className="icon" src="./public/icons/about-icon.svg"></img>
                 About
+              </li>
+            </Link>
+            <Link to={"/search"}>
+              <li>
+                <img
+                  className="icon"
+                  src="./public/icons/search-icon.svg"
+                ></img>
               </li>
             </Link>
           </ul>

@@ -1,8 +1,31 @@
 * {
   padding: 0.1rem;
   box-sizing: border-box;
+  background-color: transparent;
 }
 .webLogo {
   padding: 0.2rem;
   max-width: 20vw;
+}
+
+/* .navbar {
+  height: 10vh; /* Adjust the height as needed */
+
+.icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  margin-right: 5px; /* Adjust spacing as needed */
+}
+
+.nav-link-container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-container li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
 }
