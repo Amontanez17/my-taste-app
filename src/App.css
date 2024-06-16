@@ -1,10 +1,23 @@
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.263),
-      rgba(255, 0, 217, 0)
+      rgba(0, 0, 0, 0.799),
+      rgba(0, 0, 0, 0.353)
     ),
-    url("./music-lifestyle-leisure-entertainment-concept.jpg");
+    url("./hero-image-youth.jpg");
   background-size: cover;
-  min-height: 80vh;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 500px; /* Adjust as needed */
+  margin-bottom: 8vh;
+}
+button {
+  margin-bottom: 12vh; /* Adjust as needed */
 }
