@@ -1,5 +1,5 @@
 import MovieList from "../components/MovieList";
-import "../App.css";
+import "./HomePage.css";
 
 function HomePage() {
   return (
@@ -10,13 +10,22 @@ function HomePage() {
           <h3>Curate your taste with us</h3>
           <p>
             Tired of looking for music and not finding the right selection? We
-            are here to help you with that!{" "}
+            are here to help you with that! <br />
+            Just select your favorite movies and we will recommend music based
+            on your taste in movies{" "}
           </p>
         </div>
-        <button>Try it now</button>
+        <div className="hero-button-container">
+          <button className="hero-button">Try it now</button>
+        </div>
       </div>
       <div>
         <MovieList />
+      </div>
+      <div className="page-nav-cont">
+        {" "}
+        <button>Back</button>
+        <button>Next Page</button>
       </div>
     </>
   );

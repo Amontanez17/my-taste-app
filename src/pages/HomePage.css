@@ -1,0 +1,39 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.799),
+      rgba(0, 0, 0, 0.353)
+    ),
+    url("./hero-image-youth.jpg");
+  background-size: cover;
+  min-height: 70vh;
+  text-align: justify;
+
+  /* gap: 1rem; */
+  --width: 500px;
+  .hero-text {
+    max-width: var(--width);
+  }
+  .hero-button-container {
+    min-width: var(--width);
+  }
+}
+
+.hero-text {
+  margin-bottom: 6vh;
+  /* gap: 0.5rem; */
+}
+
+.hero-button-container {
+  margin-bottom: 14vh;
+  display: flex;
+  justify-content: flex-start;
+}
+.page-nav-cont {
+  display: flex;
+  align-items: center;
+}

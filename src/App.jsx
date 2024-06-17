@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route
+            path="/favorites"
+            element={<Favorites setFavorites={setFavorites} />}
+          />
         </Routes>
         <Footer />
       </div>

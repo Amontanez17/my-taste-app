@@ -1,11 +1,12 @@
 .footer {
   width: 100vw;
-  height: 5vh;
+  height: 8vh;
   display: flex;
   align-items: center;
   /* background-size: 100% 100%; */
   justify-content: center;
   text-align: center;
+  padding: 1rem;
 }
 
 .footer p {

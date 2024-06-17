@@ -1,23 +1,10 @@
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.799),
-      rgba(0, 0, 0, 0.353)
-    ),
-    url("./hero-image-youth.jpg");
-  background-size: cover;
-  min-height: 70vh;
-  text-align: center;
+html {
+  font-family: "neue-haas-grotesk-display", sans-serif;
 }
-
-.hero-text {
-  max-width: 500px; /* Adjust as needed */
-  margin-bottom: 8vh;
+html h1 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 800;
 }
 button {
-  margin-bottom: 12vh; /* Adjust as needed */
+  font-family: inherit;
 }

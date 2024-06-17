@@ -1,10 +1,14 @@
 * {
-  padding: 0.1rem;
   box-sizing: border-box;
-  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
 }
+.Navbar {
+  padding: 0.3rem;
+}
+
 .webLogo {
-  padding: 0.2rem;
+  padding: 0.5rem;
   max-width: 20vw;
 }
 
@@ -28,4 +32,6 @@
   align-items: center;
   padding: 10px;
   cursor: pointer;
+  font-family: "Neue Haas Grotesk", sans-serif; /* Set font family */
+  font-weight: 500px; /* Set font weight to bold */
 }

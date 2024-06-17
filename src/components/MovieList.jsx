@@ -1,43 +1,80 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import "./MovieList.css";
+import MovieCard from "./MovieCard";
 
-const API_URL = "http://localhost:5005/movies?_limit=50&_start=50";
+const API_URL = "http://localhost:5005";
 
 function MovieList() {
   const [movies, setMovies] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // async function toggleLike(movieId) {
+  //   if (favorites.includes(movieId)) {
+  //     const updateFavorites = favorites.filter((id) => id !== movieId);
+  //     setFavorites(updateFavorites);
+  //   }
+
+  async function deleteFromFav(id) {
+    try {
+      setLoading(true);
+      await axios.delete("http://localhost:5005/favorites/" + id);
+      await getAllFavorites();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function addToFav(movieId) {
+    try {
+      setLoading(true);
+      await axios.post("http://localhost:5005/favorites", { movieId });
+      await getAllFavorites();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   async function getAllMovies() {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(API_URL + "/movies?_limit=50&_start=1");
       setMovies(response.data);
     } catch (error) {
       console.log(error);
     }
   }
-
+  async function getAllFavorites() {
+    try {
+      const response = await axios.get(API_URL + "/favorites");
+      /**
+       * [{id: number, movieId: number}]
+       * [123,542,1346]
+       */
+      setFavorites(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  console.log(favorites);
   useEffect(() => {
     getAllMovies();
+    getAllFavorites();
   }, []);
 
   return (
-    <div className="MovieListPage">
-      {movies.map((movie) => {
-        return (
-          <div className="MovieCard card" key={movie.id}>
-            <img
-              src={`https://images.tmdb.org/t/p/original${movie.backdrop_path}`}
-              alt=""
-            />
-            <Link to={`/movies/${movie.id}`}>
-              <h3>{movie.title}</h3>
-            </Link>
-            <p>{movie.overview}</p>
-            {console.log(movie.overview)}
-          </div>
-        );
-      })}
-    </div>
+    <MovieCard
+      movies={movies}
+      favorites={favorites}
+      addToFav={addToFav}
+      deleteFromFav={deleteFromFav}
+      loading={loading}
+    />
   );
 }
 
