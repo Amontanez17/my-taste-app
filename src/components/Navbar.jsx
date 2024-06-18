@@ -7,16 +7,22 @@ function Navbar() {
     <header className="Header" id="Header">
       <nav className="Navbar">
         <p className="serviceName">
-          <img
-            className="webLogo"
-            src="./public/movietunes-logo-white@2x.png"
-          ></img>
+          <Link to={"/"}>
+            {" "}
+            <img
+              className="webLogo"
+              src="./public/movietunes-logo-white@2x.png"
+            ></img>
+          </Link>
         </p>
         <div className="nav-link-container">
           <ul>
             <Link to={"/"}>
               <li>
-                <img className="icon" src="./public/icons/home-icon.svg"></img>
+                <img
+                  className="icon"
+                  src="./public/icons/fluent--home-28-filled.svg"
+                ></img>
                 Home
               </li>
             </Link>
@@ -24,14 +30,17 @@ function Navbar() {
               <li>
                 <img
                   className="icon"
-                  src="./public/icons/favorite-icon.svg"
+                  src="./public/icons/material-symbols-light--favorite-rounded.svg"
                 ></img>
                 Favorites
               </li>{" "}
             </Link>
             <Link to={"/music"}>
               <li>
-                <img className="icon" src="./public/icons/music-icon.svg"></img>
+                <img
+                  className="icon"
+                  src="./public/icons/mingcute--music-3-line.svg"
+                ></img>
                 Curate
               </li>
             </Link>

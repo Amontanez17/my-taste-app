@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Neue Montreal";
 }
 .Navbar {
   padding: 0 1rem 0 1rem;
@@ -33,7 +34,10 @@ html {
   align-items: center;
   /* padding: 10px; */
   cursor: pointer;
-  font-family: "Neue Haas Grotesk", sans-serif; /* Set font family */
+  font-family: "Neue Haas Grotesk", sans-serif;
   font-weight: 500px; /* Set font weight to bold */
   font-size: medium;
+  img {
+    color: aquamarine;
+  }
 }

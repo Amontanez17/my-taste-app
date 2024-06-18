@@ -27,19 +27,23 @@ function Favorites() {
   return (
     <>
       <div>
-        <div id="fav-movie-list-page">
-          <div className="favorites-text-cont">
-            <h2 className="favorites-heading">Your Favorites</h2>
-          </div>
-          {favorites && favorites.length > 0 ? (
-            favorites.map((fav) => <MovieCard key={fav.id} movie={fav.movie} />)
-          ) : (
-            <div className="no-fave-screen">
-              {" "}
-              <p>You have no favorite movies yet.</p>
-            </div>
-          )}
+        <div className="favorites-text-cont">
+          <h2 className="favorites-heading">Your Favorites</h2>
         </div>
+        {favorites && favorites.length > 0 ? (
+          favorites.map((fav) => (
+            <div id="movie-list-page">
+              {" "}
+              <MovieCard key={fav.id} movie={fav.movie} />{" "}
+            </div>
+          ))
+        ) : (
+          <div className="no-fave-screen" fontWeight="300px">
+            {" "}
+            <img src="./empty-theater.jpg" alt="" />
+            <h5>You haven't added any favorite movies yet!</h5>
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,26 +1,25 @@
-#movie-list-page {
+.movie-list-page {
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap onto the next line */
-  justify-content: center; /* Horizontally center the cards */
-  gap: 50px;
-  /* padding-top: 3rem; */
-  padding: 3rem 0 0 0;
+  justify-content: center;
+  gap: 65px;
+  padding: 1.3rem 0 0 0;
 }
 
 .movie-card {
-  width: 410px; /* Adjust the width as needed */
-  height: auto; /* Allow the height to adjust based on content */
+  width: 415px;
+  height: auto;
 
   background-color: rgba(
-    62,
-    62,
-    62,
+    17,
+    18,
+    25,
     0.3
   ); /* Set a background color for the card */
   border-radius: 10px; /* Add rounded corners */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); Add a soft shadow effect */
-  box-shadow: 0 0 40px 10px rgba(252, 226, 255, 0.1),
-    0 0 30px 2px rgba(243, 166, 243, 0.1);
+  box-shadow: 0 0 40px 10px rgba(226, 226, 255, 0.1),
+    0 0 30px 2px rgba(212, 166, 243, 0.1);
   /* 0 0 70px 1px rgba(0, 255, 255, 0.1);  */
 
   overflow: hidden; /* Hide any content that exceeds the boundaries of the card */
@@ -43,6 +42,9 @@
 
 h4 {
   padding-top: 0.8rem;
+  font-family: "Sequel 100 Wide 95";
+  letter-spacing: 0.08rem;
+  font-size: 1.2rem;
 }
 
 .like-button {

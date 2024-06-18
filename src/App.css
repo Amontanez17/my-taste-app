@@ -2,6 +2,7 @@ h1,
 h2,
 h4 {
   font-family: "Sequel 100 Wide 95";
+  letter-spacing: 0.09rem;
 }
 
 html,
@@ -9,6 +10,7 @@ h3,
 h5,
 p {
   font-family: "neue-haas-grotesk-display", sans-serif;
+  /* font-family: "Neue Montreal"; */
   text-decoration: none;
   list-style: none;
   a {
@@ -18,6 +20,7 @@ p {
 }
 html h1 {
   font-family: "neue-haas-grotesk-display", sans-serif;
+  /* font-family: "Neue Montreal"; */
   font-weight: 800;
 }
 button {

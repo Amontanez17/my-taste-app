@@ -47,7 +47,7 @@ function MovieList() {
     movies &&
     movies.map((movie) => {
       return (
-        <div id="movie-list-page" key={movie.id}>
+        <div className="movie-list-page" key={movie.id}>
           <MovieCard movie={movie} />
         </div>
       );
