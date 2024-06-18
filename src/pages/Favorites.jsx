@@ -1,38 +1,37 @@
-import { useContext, useEffect } from "react";
-import { FavoritesContext } from "../FavoritesContext";
+import { useContext, useEffect, useState } from "react";
+import { FavoritesContext } from "../components/FavoritesContext";
+import MovieCard from "../components/MovieCard";
 import axios from "axios";
-
-const FAV_URL = "http://localhost:5005/favorites?_expand=movie";
+import "../pages/Favorites.css";
 
 function Favorites() {
-  const { favorites, setFavorites } = useContext(FavoritesContext);
+  const { favorites } = useContext(FavoritesContext);
+  // const [favoriteMovies, setFavoriteMovies] = useState(null);
 
-  async function getAllFavorites() {
-    try {
-      const response = await axios.get(FAV_URL);
+  // async function getAllFavorites() {
+  //   try {
+  //     const response = await axios.get(FAV_URL);
+  //     setFavoriteMovies(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // console.log(favorites);
 
-      setFavorites(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  console.log(favorites);
-  useEffect(() => {
-    getAllFavorites();
-  }, []);
+  // useEffect(() => {
+  //   setFavoriteMovies(favorites.map((fav) => fav.movie));
+  // }, [favorites]);
 
   return (
     <div>
-      {" "}
-      <div>
-        <h2>Favorites</h2>
-        <ul>
-          {favorites.map((fav) => (
-            <li key={fav.id}>
-              {fav.movie.title} - {fav.movie.vote_average}
-            </li>
-          ))}
-        </ul>
+      <div id="fav-movie-list-page">
+        <div className="favorites-text-cont">
+          <h2 className="favorites-heading">Your Favorites</h2>
+        </div>
+        {favorites &&
+          favorites.map((fav) => {
+            return <MovieCard movie={fav.movie} />;
+          })}
       </div>
     </div>
   );

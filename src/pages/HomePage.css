@@ -24,12 +24,13 @@
 }
 
 .hero-text {
-  margin-bottom: 6vh;
+  margin-bottom: 2vh;
+
   /* gap: 0.5rem; */
 }
 
 .hero-button-container {
-  margin-bottom: 14vh;
+  margin-bottom: 16vh;
   display: flex;
   justify-content: flex-start;
 }

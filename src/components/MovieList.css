@@ -14,13 +14,13 @@
     62,
     62,
     62,
-    0.4
+    0.3
   ); /* Set a background color for the card */
   border-radius: 10px; /* Add rounded corners */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); Add a soft shadow effect */
-  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.1),
-    /* inner white */ 0 0 30px 2px rgba(255, 0, 255, 0.1),
-    /* middle magenta */ 0 0 70px 1px rgba(0, 255, 255, 0.1); /* outer cyan */
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.58),
+    0 0 30px 2px rgba(255, 0, 255, 0.1);
+  /* 0 0 70px 1px rgba(0, 255, 255, 0.1);  */
 
   overflow: hidden; /* Hide any content that exceeds the boundaries of the card */
 }
