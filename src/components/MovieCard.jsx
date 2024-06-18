@@ -1,5 +1,5 @@
 import "../components/MovieList.css";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 function MovieCard({ movies, favorites, addToFav, deleteFromFav, loading }) {

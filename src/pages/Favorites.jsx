@@ -1,9 +1,12 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { FavoritesContext } from "../FavoritesContext";
 import axios from "axios";
 
 const FAV_URL = "http://localhost:5005/favorites?_expand=movie";
 
-function Favorites({ setFavorites }) {
+function Favorites() {
+  const { favorites, setFavorites } = useContext(FavoritesContext);
+
   async function getAllFavorites() {
     try {
       const response = await axios.get(FAV_URL);
