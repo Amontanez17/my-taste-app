@@ -1,7 +1,16 @@
 .favorites-text-cont {
   display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  /* background-color: rgba(51, 50, 50, 0.651); */
 }
 
 .favorites-heading {
   text-align: center;
+}
+
+.no-fave-screen {
+  display: flex;
+  justify-content: center;
+  min-height: 75vh;
 }

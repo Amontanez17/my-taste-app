@@ -1,5 +1,6 @@
 import MovieList from "../components/MovieList";
 import "./HomePage.css";
+import "../components/MovieList.css";
 
 function HomePage() {
   return (
@@ -19,7 +20,7 @@ function HomePage() {
           <button className="hero-button">Try it now</button>
         </div>
       </div>
-      <div>
+      <div className="movie-list-page">
         <MovieList />
       </div>
       <div className="page-nav-cont">

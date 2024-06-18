@@ -1,4 +1,13 @@
-html {
+h1,
+h2,
+h4 {
+  font-family: "Sequel 100 Wide 95";
+}
+
+html,
+h3,
+h5,
+p {
   font-family: "neue-haas-grotesk-display", sans-serif;
   text-decoration: none;
   list-style: none;
@@ -13,4 +22,5 @@ html h1 {
 }
 button {
   font-family: inherit;
+  font-size: 0.9rem;
 }

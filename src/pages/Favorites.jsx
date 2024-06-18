@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { FavoritesContext } from "../components/FavoritesContext";
 import MovieCard from "../components/MovieCard";
-import axios from "axios";
 import "../pages/Favorites.css";
+import axios from "axios";
+import "../components/MovieList.css";
+// import "../pages/Favorites.css";
 
 function Favorites() {
   const { favorites } = useContext(FavoritesContext);
@@ -23,17 +25,23 @@ function Favorites() {
   // }, [favorites]);
 
   return (
-    <div>
-      <div id="fav-movie-list-page">
-        <div className="favorites-text-cont">
-          <h2 className="favorites-heading">Your Favorites</h2>
+    <>
+      <div>
+        <div id="fav-movie-list-page">
+          <div className="favorites-text-cont">
+            <h2 className="favorites-heading">Your Favorites</h2>
+          </div>
+          {favorites && favorites.length > 0 ? (
+            favorites.map((fav) => <MovieCard key={fav.id} movie={fav.movie} />)
+          ) : (
+            <div className="no-fave-screen">
+              {" "}
+              <p>You have no favorite movies yet.</p>
+            </div>
+          )}
         </div>
-        {favorites &&
-          favorites.map((fav) => {
-            return <MovieCard movie={fav.movie} />;
-          })}
       </div>
-    </div>
+    </>
   );
 }
 

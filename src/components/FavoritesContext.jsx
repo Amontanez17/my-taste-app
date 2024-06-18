@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import "../components/MovieList.css";
 
 export const FavoritesContext = createContext();
 const API_URL = "https://json-server-backend-r2qj.onrender.com";

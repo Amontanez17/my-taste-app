@@ -3,11 +3,12 @@
   flex-wrap: wrap; /* Allow cards to wrap onto the next line */
   justify-content: center; /* Horizontally center the cards */
   gap: 50px;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
+  padding: 3rem 0 0 0;
 }
 
 .movie-card {
-  width: 400px; /* Adjust the width as needed */
+  width: 410px; /* Adjust the width as needed */
   height: auto; /* Allow the height to adjust based on content */
 
   background-color: rgba(
@@ -18,8 +19,8 @@
   ); /* Set a background color for the card */
   border-radius: 10px; /* Add rounded corners */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); Add a soft shadow effect */
-  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.58),
-    0 0 30px 2px rgba(255, 0, 255, 0.1);
+  box-shadow: 0 0 40px 10px rgba(252, 226, 255, 0.1),
+    0 0 30px 2px rgba(243, 166, 243, 0.1);
   /* 0 0 70px 1px rgba(0, 255, 255, 0.1);  */
 
   overflow: hidden; /* Hide any content that exceeds the boundaries of the card */
@@ -35,10 +36,10 @@
   object-fit: cover;
 }
 
-.card-heading {
+/* .card-heading {
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 600;
-}
+} */
 
 h4 {
   padding-top: 0.8rem;
