@@ -1,0 +1,75 @@
+.curate-form {
+  max-width: 40vw;
+}
+
+.curate-form-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.rec-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow the items to wrap onto the next line */
+  justify-content: center; /* Horizontally center the items */
+  gap: 3rem; /* Add spacing between the items */
+
+  text-align: center;
+}
+
+.rec-item {
+  width: 200px; /* Set a fixed width for each item */
+  padding: 1rem; /* Add padding for spacing within each item */
+  text-align: center; /* Center the text within each item */
+  /* border: 1px solid #ccc;  */
+  border-radius: 8px; /* Optionally, add some border radius for rounded corners */
+  background-color: rgba(
+    17,
+    18,
+    25,
+    0.3
+  ); /* Set a background color for the card */
+  border-radius: 10px; /* Add rounded corners */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); Add a soft shadow effect */
+  box-shadow: 0 0 20px 5px rgba(226, 226, 255, 0.1),
+    0 0 15px 2px rgba(212, 166, 243, 0.1);
+}
+
+.selected-movies-curate {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: none;
+  margin: 1rem;
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.selected-movies-curate.selected {
+  box-shadow: 0 0 5px 3px rgba(226, 226, 255, 0.6);
+}
+
+.selected-movie-img {
+  width: 5rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.curate-button {
+  margin-top: 1rem;
+}
+
+.button-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.rec-heading {
+  text-align: center;
+  margin: 2rem;
+}

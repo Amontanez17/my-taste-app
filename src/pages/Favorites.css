@@ -13,7 +13,7 @@
 
 .favorites-body-text {
   margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.03rem;
   max-width: 38vw;
@@ -29,4 +29,11 @@
     max-width: 50vw;
     padding: 2rem;
   }
+}
+
+.next-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem; /* Adjust the top margin as needed */
 }

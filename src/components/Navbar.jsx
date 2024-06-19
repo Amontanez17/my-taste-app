@@ -35,7 +35,7 @@ function Navbar() {
                 Favorites
               </li>{" "}
             </Link>
-            <Link to={"/music"}>
+            <Link to={"/curate"}>
               <li>
                 <img
                   className="icon"

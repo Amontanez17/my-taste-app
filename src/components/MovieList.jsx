@@ -38,9 +38,9 @@ function MovieList() {
   //     console.log(error);
   //   }
   // }
-  console.log(movies);
   useEffect(() => {
     getAllMovies();
+    console.log(movies);
   }, []);
 
   return (
