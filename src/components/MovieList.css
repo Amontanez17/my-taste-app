@@ -23,6 +23,13 @@
   /* 0 0 70px 1px rgba(0, 255, 255, 0.1);  */
 
   overflow: hidden; /* Hide any content that exceeds the boundaries of the card */
+  transition: box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  box-shadow: 0 0 40px 15px rgba(226, 226, 255, 0.3),
+    0 0 30px 4px rgba(212, 166, 243, 0.2);
+  /* Adjust the box-shadow values as needed for the increased glow effect */
 }
 
 .card-body {

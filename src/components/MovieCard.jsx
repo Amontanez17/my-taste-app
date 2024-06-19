@@ -23,9 +23,9 @@ function MovieCard({ movie }) {
           alt={"image of" + movie.title}
           loading="lazy"
         />
-        <Link to={`/movies/${movie.id}`}>
-          <h4 className="card-heading">{movie.title}</h4>
-        </Link>
+
+        <h4 className="card-heading">{movie.title}</h4>
+
         <p className="release-year">{yearOfRelease}</p>
         {/* <p className="card-heading">Score:</p> */}
         <p>⭐ {Math.round(movie.vote_average * 100) / 100}</p>

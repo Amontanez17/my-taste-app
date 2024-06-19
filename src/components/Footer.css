@@ -1,16 +1,14 @@
 .footer {
-  width: 100vw;
+  width: 100%; /* Instead of 100vw to prevent horizontal overflow */
   height: 8vh;
   display: flex;
   align-items: center;
-  /* background-size: 100% 100%; */
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  margin: 2rem;
+  margin-top: 2rem; /* Adjust the top margin as needed */
 }
 
 .footer p {
-  /* color: white; */
   font-size: 0.8rem;
 }

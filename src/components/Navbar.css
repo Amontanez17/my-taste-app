@@ -5,13 +5,13 @@ html {
   font-family: "Neue Montreal";
 }
 .Navbar {
-  padding: 0 1rem 0 1rem;
-  max-height: 4rem;
+  padding: 0 1.3rem 0 1.3rem;
+  max-height: 3.5rem;
 }
 
 .webLogo {
-  padding: 0.8rem 0 0 0;
-  max-width: 17vw;
+  padding: 0 0 0 0;
+  max-width: 14vw;
 }
 
 /* .navbar {

@@ -6,15 +6,18 @@ function Navbar() {
   return (
     <header className="Header" id="Header">
       <nav className="Navbar">
-        <p className="serviceName">
-          <Link to={"/"}>
-            {" "}
-            <img
-              className="webLogo"
-              src="./public/movietunes-logo-white@2x.png"
-            ></img>
-          </Link>
-        </p>
+        <ul>
+          <li>
+            <Link to={"/"}>
+              {" "}
+              <img
+                className="webLogo"
+                src="./public/movietunes-logo-white@2x.png"
+              ></img>
+            </Link>
+          </li>
+        </ul>
+
         <div className="nav-link-container">
           <ul>
             <Link to={"/"}>
