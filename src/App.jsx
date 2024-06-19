@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
 import Favorites from "./pages/Favorites";
 import Curate from "./pages/Curate";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/curate" element={<Curate />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

@@ -50,18 +50,21 @@ function Navbar() {
 
             <Link to={"/about"}>
               <li>
-                <img className="icon" src="./public/icons/about-icon.svg"></img>
+                <img
+                  className="icon"
+                  src="./public/icons/mdi--smiley-cool.svg"
+                ></img>
                 About
               </li>
             </Link>
-            <Link to={"/search"}>
+            {/* <Link to={"/search"}>
               <li>
                 <img
                   className="icon"
                   src="./public/icons/search-icon.svg"
                 ></img>
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
       </nav>

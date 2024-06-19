@@ -39,3 +39,7 @@ html {
   font-size: medium;
   color: rgb(237, 235, 240);
 }
+
+.nav-link-container li:hover {
+  color: var(--pico-border-color);
+}

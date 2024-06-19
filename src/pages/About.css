@@ -1,0 +1,40 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10vh;
+  gap: 2rem;
+  h1 {
+    font-family: "Sequel 100 Wide 95";
+    letter-spacing: 0.09rem;
+  }
+  p {
+    max-width: 35vw;
+    letter-spacing: 0.08rem;
+  }
+}
+
+.profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block; /* Display the image in a block */
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 15rem; /* Adjust the image size as needed */
+  height: 15rem;
+  object-fit: cover;
+  object-position: 80% 0%;
+  border: 3px solid #fff; /* Add a white border to create the rounded effect */
+  border-radius: 50%; /* Apply the rounded shape */
+  /* transform: scale(1.2); */
+}
+
+.links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: hsla(242, 88.4%, 66.3%, 1);
+}

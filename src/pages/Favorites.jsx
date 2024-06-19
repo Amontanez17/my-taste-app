@@ -29,7 +29,7 @@ function Favorites() {
         <h2 className="favorites-heading">Your Favorites</h2>
         <p className="favorites-body-text">
           Sort through your favorites and finalize your selection before getting
-          your personalized music recommendation ✨
+          your personalized recommendations ✨
         </p>
       </div>
       {/* <select name="" id="" multiple>
