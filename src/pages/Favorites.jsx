@@ -8,7 +8,7 @@ import "../components/MovieList.css";
 
 function Favorites() {
   const { favorites } = useContext(FavoritesContext);
-  // const [favoriteMovies, setFavoriteMovies] = useState(null);
+  const [selectedMovies, setSelectedMovies] = useState([]);
 
   // async function getAllFavorites() {
   //   try {
@@ -24,19 +24,63 @@ function Favorites() {
   //   setFavoriteMovies(favorites.map((fav) => fav.movie));
   // }, [favorites]);
 
+  function handleSelect(title) {
+    const found = selectedMovies.find((movieTitle) => movieTitle === title);
+    if (found) {
+      setSelectedMovies(
+        selectedMovies.filter((movieTitle) => movieTitle !== title)
+      );
+    } else {
+      setSelectedMovies([...selectedMovies, title]);
+    }
+  }
+  console.log(selectedMovies);
+
   return (
     <>
-      <div>
-        <div className="favorites-text-cont">
-          <h2 className="favorites-heading">Your Favorites</h2>
-        </div>
-        {favorites && favorites.length > 0 ? (
+      <div className="favorites-text-cont">
+        <h2 className="favorites-heading">Your Favorites</h2>
+        <p className="favorites-body-text">
+          Sort through your favorites and finalize your selection before getting
+          your personalized music recommendation by pressing curate ✨
+        </p>
+      </div>
+      {/* <select name="" id="" multiple>
+        {favorites &&
+          favorites.length &&
           favorites.map((fav) => (
-            <div id="movie-list-page">
-              {" "}
-              <MovieCard key={fav.id} movie={fav.movie} />{" "}
-            </div>
-          ))
+            <option value={fav.movie.title}>{fav.movie.title}</option>
+          ))}
+      </select> */}
+
+      <div>
+        {favorites &&
+          favorites.length > 0 &&
+          favorites.map(({ movie }) => {
+            const selected = selectedMovies.find(
+              (movieTitle) => movieTitle === movie.title
+            );
+            return (
+              <div
+                onClick={() => handleSelect(movie.title)}
+                style={{
+                  cursor: "pointer",
+                  padding: "1rem",
+                  border: "1px solid white",
+                  boxShadow: selected ? "0 0 4px 8px white" : "",
+                }}
+              >
+                <img src={movie.image} alt="" height={100} />
+                <p>{movie.title}</p>
+                {console.log(movie.title)}
+              </div>
+            );
+          })}
+      </div>
+
+      <div className="movie-list-page">
+        {favorites && favorites.length > 0 ? (
+          favorites.map((fav) => <MovieCard key={fav.id} movie={fav.movie} />)
         ) : (
           <div className="no-fave-screen" fontWeight="300px">
             {" "}

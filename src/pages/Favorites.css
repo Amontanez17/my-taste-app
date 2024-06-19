@@ -1,12 +1,22 @@
 .favorites-text-cont {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 3rem;
   /* background-color: rgba(51, 50, 50, 0.651); */
 }
 
 .favorites-heading {
   text-align: center;
+}
+
+.favorites-body-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.03rem;
+  max-width: 38vw;
 }
 
 .no-fave-screen {

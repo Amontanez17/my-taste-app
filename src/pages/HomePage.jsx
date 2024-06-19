@@ -20,9 +20,9 @@ function HomePage() {
         </div>
       </div>
       <h4 className="home-headline">Pick your favorite films to begin!</h4>
-      <div className="movie-list-page">
-        <MovieList />
-      </div>
+
+      <MovieList />
+
       <div className="page-nav-cont">
         {" "}
         <button>Back</button>

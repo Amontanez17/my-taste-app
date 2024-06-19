@@ -44,14 +44,12 @@ function MovieList() {
   }, []);
 
   return (
-    movies &&
-    movies.map((movie) => {
-      return (
-        <div className="movie-list-page" key={movie.id}>
-          <MovieCard movie={movie} />
-        </div>
-      );
-    })
+    <div className="movie-list-page">
+      {movies &&
+        movies.map((movie) => {
+          return <MovieCard movie={movie} key={movie.id} />;
+        })}
+    </div>
   );
 }
 export default MovieList;
