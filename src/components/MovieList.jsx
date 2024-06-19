@@ -11,6 +11,8 @@ function MovieList() {
   const [movies, setMovies] = useState(null);
   const { getAllFavorites, favorites, addToFav, deleteFromFav, loading } =
     useContext(FavoritesContext);
+  const [page, setPage] = useState(1);
+  const moviesPerPage = 20;
 
   // async function toggleLike(movieId) {
   //   if (favorites.includes(movieId)) {
@@ -20,36 +22,43 @@ function MovieList() {
 
   async function getAllMovies() {
     try {
-      const response = await axios.get(API_URL + "/movies?_limit=20&_start=1");
+      const response = await axios.get(
+        `${API_URL}/movies?_limit=${moviesPerPage}&_page=${page}`
+      );
       setMovies(response.data);
     } catch (error) {
       console.log(error);
     }
   }
-  // async function getAllFavorites() {
-  //   try {
-  //     const response = await axios.get(API_URL + "/favorites");
-  //     /**
-  //      * [{id: number, movieId: number}]
-  //      * [123,542,1346]
-  //      */
-  //     setFavorites(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+
   useEffect(() => {
     getAllMovies();
     console.log(movies);
-  }, []);
+  }, [page]);
+
+  const handleNextPage = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    setPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
 
   return (
-    <div className="movie-list-page">
-      {movies &&
-        movies.map((movie) => {
-          return <MovieCard movie={movie} key={movie.id} />;
-        })}
-    </div>
+    <FavoritesContext.Provider
+      value={{ favorites, addToFav, deleteFromFav, loading }}
+    >
+      <div className="movie-list-page">
+        {movies &&
+          movies.map((movie) => {
+            return <MovieCard movie={movie} key={movie.id} />;
+          })}
+        <div className="page-nav-cont">
+          <button onClick={handlePrevPage}>Back</button>
+          <button onClick={handleNextPage}>Next Page</button>
+        </div>
+      </div>
+    </FavoritesContext.Provider>
   );
 }
 export default MovieList;

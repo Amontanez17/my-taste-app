@@ -1,9 +1,19 @@
 .movie-list-page {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 65px;
   padding: 1.3rem 0 0 0;
+}
+
+.page-nav-cont {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.page-nav-cont button {
+  margin: 0 10px;
 }
 
 .movie-card {
@@ -56,4 +66,14 @@ h4 {
 
 .like-button {
   align-self: center;
+}
+
+.page-nav-cont {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.page-nav-cont button {
+  margin: 0 10px;
 }

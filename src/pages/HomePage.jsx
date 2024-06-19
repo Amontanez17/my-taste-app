@@ -12,7 +12,8 @@ function HomePage() {
           <p>
             Tired of looking for music and not finding the right selection? We
             are here to help you with that. Just select your favorite movies and
-            we will recommend music based on your taste in movies{" "}
+            we will recommend music, podcasts, and movies based on your taste in
+            movies!{" "}
           </p>
         </div>
         <div className="hero-button-container">
@@ -23,11 +24,11 @@ function HomePage() {
 
       <MovieList />
 
-      <div className="page-nav-cont">
+      {/* <div className="page-nav-cont">
         {" "}
         <button>Back</button>
         <button>Next Page</button>
-      </div>
+      </div> */}
     </>
   );
 }
