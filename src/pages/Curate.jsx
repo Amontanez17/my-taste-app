@@ -61,6 +61,11 @@ function Curate() {
     }
   }
 
+  useEffect(() => {
+    // Conditionally log the recommendation state when it changes
+    console.log("Recommendations:", recommendation);
+  }, [recommendation]);
+
   return (
     <>
       <div className="favorites-text-cont">
@@ -69,7 +74,6 @@ function Curate() {
           Finalize your selection before getting your personalized music, book,
           or movie recommendation by pressing curate 🔮
         </p>
-        {/* <button>Curate</button> */}
       </div>
       <div className="curate-form-cont">
         <form className="curate-form" onSubmit={handleSubmit}>
@@ -130,19 +134,23 @@ function Curate() {
           </div>
         </form>
       </div>
-      {/* <div className="rec-text"></div> */}
-      <h4 className="rec-heading">Here are your recommendations 🔥</h4>
-      <div className="rec-container">
-        {recommendation.length > 0 &&
-          recommendation.map((rec, index) => (
-            <div key={index} className="rec-item">
-              <h5>{rec.name}</h5>
-              <p>{rec.type}</p>
-            </div>
-          ))}
-      </div>
+      {loading ? (
+        <p className="loading-text">Loading recommendations...</p>
+      ) : recommendation.length > 0 ? (
+        <div>
+          <h4 className="rec-heading">Here are your recommendations 🔥</h4>
+          <div className="rec-container">
+            {recommendation.length > 0 &&
+              recommendation.map((rec, index) => (
+                <div key={index} className="rec-item">
+                  <h5>{rec.name}</h5>
+                  <p>{rec.type}</p>
+                </div>
+              ))}
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }
-
 export default Curate;

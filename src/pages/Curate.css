@@ -73,3 +73,8 @@
   text-align: center;
   margin: 2rem;
 }
+
+.loading-text {
+  text-align: center; /* Center the text horizontally */
+  margin-top: 20px; /* Add top margin as needed */
+}
