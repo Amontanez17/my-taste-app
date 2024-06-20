@@ -61,7 +61,7 @@ h4 {
   padding-top: 0.8rem;
   font-family: "Sequel 100 Wide 95";
   letter-spacing: 0.08rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .like-button {
@@ -112,6 +112,6 @@ h4 {
 .score,
 .release-year,
 .card-text {
-  margin: 6px 0; /* Decrease the top and bottom margin for all the elements */
+  margin: 6.8px 0; /* Decrease the top and bottom margin for all the elements */
   /* font-size: 0.9rem; */
 }
