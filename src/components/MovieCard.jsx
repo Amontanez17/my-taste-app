@@ -26,9 +26,9 @@ function MovieCard({ movie }) {
 
         <h4 className="card-heading">{movie.title}</h4>
 
+        <p className="score">⭐ {Math.round(movie.vote_average * 100) / 100}</p>
         <p className="release-year">{yearOfRelease}</p>
         {/* <p className="card-heading">Score:</p> */}
-        <p>⭐ {Math.round(movie.vote_average * 100) / 100}</p>
         <details>
           <summary className="card-heading">Overview</summary>
           <p className="card-text">{movie.overview}</p>

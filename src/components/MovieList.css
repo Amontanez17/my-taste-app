@@ -103,5 +103,15 @@ h4 {
   }
 }
 
-/* .search-button {
-  font-size: 0.5rem; /* Adjust the font size to make the button smaller */
+.score {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.card-heading,
+.score,
+.release-year,
+.card-text {
+  margin: 6px 0; /* Decrease the top and bottom margin for all the elements */
+  /* font-size: 0.9rem; */
+}
