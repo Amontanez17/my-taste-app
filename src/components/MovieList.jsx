@@ -13,6 +13,7 @@ function MovieList() {
     useContext(FavoritesContext);
   const [page, setPage] = useState(1);
   const moviesPerPage = 20;
+  const [search, setSearch] = useState("");
 
   // async function toggleLike(movieId) {
   //   if (favorites.includes(movieId)) {
@@ -24,6 +25,17 @@ function MovieList() {
     try {
       const response = await axios.get(
         `${API_URL}/movies?_limit=${moviesPerPage}&_page=${page}`
+      );
+      setMovies(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function handleSearch() {
+    try {
+      const response = await axios.get(
+        `${API_URL}/movies?_limit=${moviesPerPage}&original_title_like=${search}`
       );
       setMovies(response.data);
     } catch (error) {
@@ -45,20 +57,30 @@ function MovieList() {
   };
 
   return (
-    <FavoritesContext.Provider
-      value={{ favorites, addToFav, deleteFromFav, loading }}
-    >
+    <>
+      <div className="search-cont">
+        <input
+          className="search-bar"
+          type="search"
+          placeholder="search for a movie"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />{" "}
+        <button className="search-button" onClick={handleSearch}>
+          search
+        </button>
+      </div>
       <div className="movie-list-page">
         {movies &&
           movies.map((movie) => {
             return <MovieCard movie={movie} key={movie.id} />;
           })}
-        <div className="page-nav-cont">
-          <button onClick={handlePrevPage}>Back</button>
-          <button onClick={handleNextPage}>Next Page</button>
-        </div>
       </div>
-    </FavoritesContext.Provider>
+      <div className="page-nav-cont">
+        <button onClick={handlePrevPage}>Back</button>
+        <button onClick={handleNextPage}>Next Page</button>
+      </div>
+    </>
   );
 }
 export default MovieList;

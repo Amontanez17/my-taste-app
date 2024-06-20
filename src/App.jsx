@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Favorites from "./pages/Favorites";
 import Curate from "./pages/Curate";
 import About from "./pages/About";
+import Pointer from "./components/Pointer.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Pointer />
     </>
   );
 }

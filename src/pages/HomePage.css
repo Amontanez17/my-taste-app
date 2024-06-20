@@ -5,10 +5,10 @@
   align-items: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(15, 14, 14, 0.682),
-      rgba(0, 0, 0, 0.828)
+      rgba(15, 14, 14, 0.582),
+      rgba(0, 0, 0, 0.728)
     ),
-    url("./hero-image-youth.jpg");
+    url("./entertainment-hero.jpg");
   background-size: cover;
   min-height: 80vh;
 
@@ -23,7 +23,7 @@
 }
 
 .hero-text {
-  margin-bottom: 2.5vh;
+  margin-bottom: 2.3vh;
   h1 {
     font-family: "Sequel 100 Wide 95";
     letter-spacing: 0.1rem;
@@ -37,7 +37,7 @@
 }
 
 .hero-button-container {
-  margin-bottom: 17vh;
+  margin-bottom: 19vh;
   display: flex;
   justify-content: flex-start;
 }
@@ -49,6 +49,7 @@
 .home-headline {
   /* font-family: "neue-haas-grotesk-display", sans-serif; */
   margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   font-size: 1.7rem;
 }
