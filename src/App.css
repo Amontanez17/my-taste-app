@@ -20,6 +20,7 @@ p {
     text-decoration: none; /* Remove the underline */
     /* Other styles if needed */
   }
+  font-size: 1.1rem;
 }
 html h1 {
   font-family: "neue-haas-grotesk-display", sans-serif;
@@ -29,4 +30,8 @@ html h1 {
 button {
   font-family: inherit;
   font-size: 0.9rem;
+}
+
+html p {
+  font-size: 0.88rem;
 }

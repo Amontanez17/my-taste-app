@@ -77,3 +77,7 @@ h4 {
 .page-nav-cont button {
   margin: 0 10px;
 }
+
+.card-text {
+  font-size: 0.98rem;
+}

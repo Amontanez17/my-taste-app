@@ -12,7 +12,7 @@ function Navbar() {
               {" "}
               <img
                 className="webLogo"
-                src="./public/movietunes-logo-white@2x.png"
+                src="./movietunes-logo-white@2x.png"
               ></img>
             </Link>
           </li>
@@ -24,7 +24,7 @@ function Navbar() {
               <li>
                 <img
                   className="icon"
-                  src="./public/icons/fluent--home-28-filled.svg"
+                  src="./icons/fluent--home-28-filled.svg"
                 ></img>
                 Home
               </li>
@@ -33,7 +33,7 @@ function Navbar() {
               <li>
                 <img
                   className="icon"
-                  src="./public/icons/material-symbols-light--favorite-rounded.svg"
+                  src="./icons/material-symbols-light--favorite-rounded.svg"
                 ></img>
                 Favorites
               </li>{" "}
@@ -42,7 +42,7 @@ function Navbar() {
               <li>
                 <img
                   className="icon"
-                  src="./public/icons/mingcute--music-3-line.svg"
+                  src="./icons/mingcute--music-3-line.svg"
                 ></img>
                 Curate
               </li>
@@ -50,10 +50,7 @@ function Navbar() {
 
             <Link to={"/about"}>
               <li>
-                <img
-                  className="icon"
-                  src="./public/icons/mdi--smiley-cool.svg"
-                ></img>
+                <img className="icon" src="./icons/mdi--smiley-cool.svg"></img>
                 About
               </li>
             </Link>

@@ -1,6 +1,7 @@
 import MovieList from "../components/MovieList";
 import "./HomePage.css";
 import "../components/MovieList.css";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -17,7 +18,10 @@ function HomePage() {
           </p>
         </div>
         <div className="hero-button-container">
-          <button className="hero-button">Try it now</button>
+          <Link to={"/favorites"}>
+            {" "}
+            <button className="hero-button">Try it now</button>
+          </Link>
         </div>
       </div>
       <h4 className="home-headline">Pick your favorite films to begin!</h4>
