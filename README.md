@@ -18,11 +18,11 @@ This was my first React JS project at the Ironhack Full-Stack Web Development pr
 * 
 * A search bar to search through the database.
 
-* **Like and save:** The ability to manipulate the data set by adding and removing favorites and then displaying them on a dedicated page.
+* Like and save: The ability to manipulate the data set by adding and removing favorites and then displaying them on a dedicated page.
 
 * These can be edited from any page!
 
-* **Request: ** Based on your selection, you can send a request to the Tastedive API to get movie, music, or podcast recommendations giving you a curated media experience!
+* Request:  Based on your selection, you can send a request to the Tastedive API to get movie, music, or podcast recommendations giving you a curated media experience!
 
 
 ### [TEST THE WEB APP HERE](https://movietunes.netlify.app/)
@@ -32,7 +32,7 @@ This was my first React JS project at the Ironhack Full-Stack Web Development pr
 ### What's Next:
 * **Push the design:** Given the time constraints, I did not get to experiment with the design and ui as much as I would have loved to but that’s okay!
 
-* **Add local storage/users:**Being able to store your favorites and recs and link them to a user account.
+* **Add local storage/users:** Being able to store your favorites and recs and link them to a user account.
 
 * **Incorporate Spotify API:** There is a Spotify API that let’s premium users integrate the app in their own web apps and create playlists.
 
