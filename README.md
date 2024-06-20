@@ -1,6 +1,6 @@
 # Movietunes: Explore your audiovisual taste
 ## by Angela Montanez
-## [Check out my presentation here!] (https://www.canva.com/design/DAGGtk1utrw/0HsyOsgdC09fTtCle06B4w/edit?utm_content=DAGGtk1utrw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+## [Check out my presentation here!](https://www.canva.com/design/DAGGtk1utrw/0HsyOsgdC09fTtCle06B4w/edit?utm_content=DAGGtk1utrw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ### Why I chose this app:
 As a lover of music and film, I decided to create a web app that allows you to pick your favorite movies and then based on your selection recommends podcasts, music, and even other movies.
 
