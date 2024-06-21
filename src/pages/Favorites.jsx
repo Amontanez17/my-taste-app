@@ -71,7 +71,7 @@ function Favorites() {
         ) : (
           <div className="no-fave-screen" fontWeight="300px">
             {" "}
-            <img src="./empty-theater.jpg" alt="" />
+            <img src="./spongebob.gif" alt="" />
             <h5>You haven't added any favorite movies yet!</h5>
           </div>
         )}
