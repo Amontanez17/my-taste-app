@@ -4,6 +4,7 @@ import "./Favorites.css";
 import { FavoritesContext } from "../components/FavoritesContext";
 import axios from "axios";
 import { KEY } from "../consts.js";
+console.log(KEY);
 import "./Curate.css";
 
 const baseUrl = "https://tastedive-proxy.onrender.com";
